@@ -1,0 +1,16 @@
+@import "_nullstyle.scss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
+// @import "base/mixins";
+@import "fonts/iconsfont.scss";
+
+$fontFamily: "Montserrat";
+$fontSize: rem(18);
+
+html {
+}
+
+body {
+   font-family: "Montserrat";
+   font-weight: 500;
+   font-size: 18px;
+}
