@@ -1,9 +1,8 @@
 @font-face {
    font-family: "icons";
-   src: url("../../fonts/icons.eot");
-   src: url("../../fonts/icons.eot") format("embedded-opentype"),
-      url("../../fonts/icons.ttf") format("../../fonts/truetype"), url("../../fonts/icons.woff") format("woff"),
-      url("../../fonts/icons.svg?") format("svg");
+   src: url("../fonts/icons.eot");
+   src: url("../fonts/icons.eot") format("embedded-opentype"), url("../fonts/icons.ttf") format("truetype"),
+      url("../fonts/icons.woff") format("woff"), url("../fonts/icons.svg?") format("svg");
    font-weight: normal;
    font-style: normal;
    font-display: block;
@@ -25,18 +24,39 @@
    -moz-osx-font-smoothing: grayscale;
 }
 
-._icon-call-white:before {
+._icon-account:before {
+   content: "\e900";
+}
+._icon-arrow:before {
    content: "\e901";
 }
-._icon-star-gold:before {
-   content: "\e903";
-}
-._icon-scales:before {
-   content: "\e905";
+._icon-call:before {
+   content: "\e902";
 }
 ._icon-cart:before {
+   content: "\e903";
+}
+._icon-clock:before {
+   content: "\e904";
+}
+._icon-email:before {
+   content: "\e905";
+}
+._icon-favourites:before {
    content: "\e906";
 }
-._icon-search:before {
+._icon-icon:before {
    content: "\e907";
+}
+._icon-Logo-header:before {
+   content: "\e908";
+}
+._icon-scales:before {
+   content: "\e909";
+}
+._icon-search:before {
+   content: "\e90a";
+}
+._icon-star:before {
+   content: "\e90b";
 }

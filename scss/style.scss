@@ -3,14 +3,106 @@
 // @import "base/mixins";
 @import "fonts/iconsfont.scss";
 
+
+// --------Настройки контейнера-------------------------------------
 $fontFamily: "Montserrat";
 $fontSize: rem(18);
+$mainDarkColor: #141414;
+$minWidth: 320; // Минимальная ширина страницы
+$maxWidth: 1920; // Ширина полотна макета
+$maxWidthContainer: 1590; // Ширина ограничевающего контейнера
+$containerPadding: 30; // по 15 слева и справа
+$respositiveType: 1; 
+$containerWidth: $maxWidthContainer + $containerPadding;// Ширина срабатывания первого брейк-поинта
 
-html {
-}
+
+// ----------Брейк-поинты---------------------------
+
+$pc: em($containerWidth); // ПК , ноутбуки , некоторые планшеты в горизонтальном положении
+$tablet: em(991.98); // Планшеты , некоторые телефоны в горизонтальном
+$mobile: em(767.98); // Тедефоны 
+$mobileSmall: em(479.98); // Маленькие телефоны
+
+
 
 body {
    font-family: "Montserrat";
    font-weight: 500;
    font-size: 18px;
+   .lock & {
+      overflow: hidden;
+      touch-action: none;
+   }
+}
+
+
+// -----------Оболочка----------------------
+
+.wrapper {
+   min-height: 100%;
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+   // Сайт загружен
+   .loaded & {
+   }
+   // Прижимаем футер 
+   > main {
+      flex: 1 1 auto;
+   }
+   // Фикс для слайдеров
+   > * {
+      min-width: 0;
+   }
+}
+
+// Ограничивающий контейнер----------------------------------
+
+
+
+// -----------Хэдэр--------------------
+
+.header {
+
+		&__top {
+         background-color: $mainDarkColor;
+         color: #fff;
+      }
+
+		&__body {}
+
+		&__catalog {}
+}
+.top-header {
+
+		&__container {
+         display: flex;
+         align-items: center;
+         gap: 20px;
+      }
+
+		&__menu {
+         flex: 1 1 auto;
+
+      }
+
+		&__user {}
+}
+.menu {
+
+		&__list {}
+
+		&__item {}
+
+		&__link {}
+}
+._icon {
+
+		&__user {}
+}
+.icon-menu {
+}
+.body-header {
+}
+.catalog-header {
 }
