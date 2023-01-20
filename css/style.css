@@ -69,8 +69,8 @@ h1, h2, h3, h4, h5, h6 {
 /*===================================================*/
 @font-face {
   font-family: "icons";
-  src: url("../../fonts/icons.eot");
-  src: url("../../fonts/icons.eot") format("embedded-opentype"), url("../../fonts/icons.ttf") format("../../fonts/truetype"), url("../../fonts/icons.woff") format("woff"), url("../../fonts/icons.svg?") format("svg");
+  src: url("../fonts/icons.eot");
+  src: url("../fonts/icons.eot") format("embedded-opentype"), url("../fonts/icons.ttf") format("truetype"), url("../fonts/icons.woff") format("woff"), url("../fonts/icons.svg?") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -90,24 +90,52 @@ h1, h2, h3, h4, h5, h6 {
   -moz-osx-font-smoothing: grayscale;
 }
 
-._icon-call-white:before {
+._icon-account:before {
+  content: "\e900";
+}
+
+._icon-arrow:before {
   content: "\e901";
 }
 
-._icon-star-gold:before {
-  content: "\e903";
-}
-
-._icon-scales:before {
-  content: "\e905";
+._icon-call:before {
+  content: "\e902";
 }
 
 ._icon-cart:before {
+  content: "\e903";
+}
+
+._icon-clock:before {
+  content: "\e904";
+}
+
+._icon-email:before {
+  content: "\e905";
+}
+
+._icon-favourites:before {
   content: "\e906";
 }
 
-._icon-search:before {
+._icon-icon:before {
   content: "\e907";
+}
+
+._icon-Logo-header:before {
+  content: "\e908";
+}
+
+._icon-scales:before {
+  content: "\e909";
+}
+
+._icon-search:before {
+  content: "\e90a";
+}
+
+._icon-star:before {
+  content: "\e90b";
 }
 
 body {
@@ -137,11 +165,91 @@ body {
   background-color: #141414;
   color: #fff;
 }
+.top-header {
+  padding: 10px 5px;
+}
 .top-header__container {
   display: flex;
   align-items: center;
   gap: 20px;
+  min-height: 50px;
 }
 .top-header__menu {
   flex: 1 1 auto;
+}
+.top-header__user {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 122.2222222222%;
+}
+.top-header__user::before {
+  font-size: 28px;
+  margin: 0px 15px 0px 0px;
+}
+
+.menu__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+@media (max-width: 770px) {
+  .menu__list {
+    gap: 30px;
+  }
+}
+@media (max-width: 685px) {
+  .menu__list {
+    gap: 15px;
+  }
+}
+@media (max-width: 625px) {
+  .menu__list {
+    display: none;
+  }
+}
+.menu__link {
+  font-size: 16px;
+  color: #fff;
+  line-height: 125%;
+}
+
+.icon-menu {
+  display: none;
+}
+@media (max-width: 767.98px) {
+  .icon-menu {
+    display: block;
+    position: relative;
+    flex: 0 0 30px;
+    cursor: pointer;
+    z-index: 5;
+  }
+  .icon-menu span, .icon-menu::before, .icon-menu::after {
+    content: "";
+    transition: all 0.3s ease 0s;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+  }
+  .icon-menu::before {
+    top: 0px;
+  }
+  .icon-menu::after {
+    bottom: 0px;
+  }
+  .icon-menu span {
+    top: calc(50% - 1px);
+  }
+  .menu-open .icon-menu span {
+    transform: scale(0);
+  }
+  .menu-open .icon-menu::before {
+    transform: rotate(-45deg);
+    top: calc(50% - 1px);
+  }
 }

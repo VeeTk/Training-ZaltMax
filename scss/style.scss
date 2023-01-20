@@ -3,7 +3,6 @@
 // @import "base/mixins";
 @import "fonts/iconsfont.scss";
 
-
 // --------Настройки контейнера-------------------------------------
 $fontFamily: "Montserrat";
 $fontSize: rem(18);
@@ -12,18 +11,15 @@ $minWidth: 320; // Минимальная ширина страницы
 $maxWidth: 1920; // Ширина полотна макета
 $maxWidthContainer: 1590; // Ширина ограничевающего контейнера
 $containerPadding: 30; // по 15 слева и справа
-$respositiveType: 1; 
-$containerWidth: $maxWidthContainer + $containerPadding;// Ширина срабатывания первого брейк-поинта
-
+$respositiveType: 1;
+$containerWidth: $maxWidthContainer + $containerPadding; // Ширина срабатывания первого брейк-поинта
 
 // ----------Брейк-поинты---------------------------
 
-$pc: em($containerWidth); // ПК , ноутбуки , некоторые планшеты в горизонтальном положении
-$tablet: em(991.98); // Планшеты , некоторые телефоны в горизонтальном
-$mobile: em(767.98); // Тедефоны 
-$mobileSmall: em(479.98); // Маленькие телефоны
-
-
+$pc: px($containerWidth); // ПК , ноутбуки , некоторые планшеты в горизонтальном положении
+$tablet: 991.98px; // Планшеты , некоторые телефоны в горизонтальном
+$mobile: 767.98px; // Тедефоны
+$mobileSmall: 479.98px; // Маленькие телефоны
 
 body {
    font-family: "Montserrat";
@@ -35,7 +31,6 @@ body {
    }
 }
 
-
 // -----------Оболочка----------------------
 
 .wrapper {
@@ -46,7 +41,7 @@ body {
    // Сайт загружен
    .loaded & {
    }
-   // Прижимаем футер 
+   // Прижимаем футер
    > main {
       flex: 1 1 auto;
    }
@@ -58,49 +53,114 @@ body {
 
 // Ограничивающий контейнер----------------------------------
 
-
-
 // -----------Хэдэр--------------------
 
 .header {
+   &__top {
+      background-color: $mainDarkColor;
+      color: #fff;
+   }
 
-		&__top {
-         background-color: $mainDarkColor;
-         color: #fff;
-      }
+   &__body {
+   }
 
-		&__body {}
-
-		&__catalog {}
+   &__catalog {
+   }
 }
 .top-header {
+   padding: 10px 5px;
+   &__container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      min-height: 50px;
+   }
 
-		&__container {
-         display: flex;
-         align-items: center;
-         gap: 20px;
+   &__menu {
+      flex: 1 1 auto;
+   }
+
+   &__user {
+      display: flex;
+      align-items: center;
+      color: #fff;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: calc((22 / 18) * 100%);
+      &::before {
+         font-size: 28px;
+         margin: 0px 15px 0px 0px;
       }
-
-		&__menu {
-         flex: 1 1 auto;
-
-      }
-
-		&__user {}
+   }
 }
 .menu {
+   &__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 60px;
+      // @include adaptiveValue("gap" , 60, 20);
+      @media (max-width: 770px) {
+         gap: 30px;
+      }
+      @media (max-width: 685px) {
+         gap: 15px;
+      }
+      @media (max-width: 625px) {
+         display: none;
+      }
+   }
 
-		&__list {}
+   &__item {
+   }
 
-		&__item {}
-
-		&__link {}
+   &__link {
+      font-size: 16px;
+      color: #fff;
+      line-height: calc((20 / 16) * 100%);
+   }
 }
 ._icon {
-
-		&__user {}
+   &__user {
+   }
 }
 .icon-menu {
+   display: none;
+   @media (max-width: $mobile) {
+      display: block;
+      position: relative;
+      flex: 0 0 30px; //  ----------------------------Важноооо------------
+      cursor: pointer;
+      z-index: 5;
+      span,
+      &::before,
+      &::after {
+         content: "";
+         transition: all 0.3s ease 0s;
+         left: 0px;
+         width: 100%;
+         height: 2px;
+         background-color: #fff;
+         position: absolute;
+      }
+      &::before {
+         top: 0px;
+      }
+      &::after {
+         bottom: 0px;
+      }
+      span {
+         top: calc(50% - 1px);
+      }
+      .menu-open & {
+         span {
+            transform: scale(0);
+         }
+         &::before {
+            transform: rotate(-45deg);
+            top: calc(50% - 1px);
+         }
+      }
+   }
 }
 .body-header {
 }
