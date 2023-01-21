@@ -123,6 +123,7 @@ body {
    &__user {
    }
 }
+// ----------------Burger--------------------------
 .icon-menu {
    display: none;
    @media (max-width: $mobile) {
@@ -165,4 +166,202 @@ body {
 .body-header {
 }
 .catalog-header {
+}
+
+//=====================Второй этаж============================================
+.header {
+   &__body {
+   }
+}
+
+.body-header {
+   padding: 10px 0px;
+   background-color: #ecf1f2;
+   &__container {
+      display: flex;
+      min-height: 70px;
+      align-items: center;
+   }
+
+   &__logo {
+      color: $mainDarkColor;
+      font-size: 42px;
+   }
+
+   &__search {
+      flex: 1 1 auto;
+      margin-right: 15px;
+      padding: 0px 0px 0px 158px; //В отзывчивое свойство!!!---------
+   }
+}
+
+.search-header {
+   max-width: 377px;
+   min-width: 191px;
+   position: relative;
+   background-color: rgba(7, 7, 7, 0.03);
+   border: 1px solid rgba(4, 4, 4, 0.5);
+   border-radius: 3px;
+   &__button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 41px;
+      width: 41px;
+      background-color: transparent;
+      position: absolute;
+      top: 0px;
+      left: 8px;
+      color: rgba(0, 0, 0, 0.5);
+      font-size: 16px;
+   }
+
+   &__input {
+      width: 100%;
+      background-color: transparent;
+      border-radius: 3px;
+      height: 41px;
+      padding: 0px 20px 0px 50px;
+      color: #141414;
+      &::placeholder {
+         color: rgba(0, 0, 0, 0.5);
+      }
+   }
+}
+//=============Правая часть второго этажа==============================
+.body-header {
+   &__actions {
+   }
+}
+.actions-header {
+   display: flex;
+   justify-content: center;
+   column-gap: 30px;
+   &__location {
+      color: #000;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 600;
+      margin: 0px 25px 0px 0px;
+      &::before {
+         font-size: 24px;
+         margin: 0px 24px 0px 0px;
+      }
+   }
+
+   &__phone {
+   }
+
+   &__favorite {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   &__cart {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+}
+
+._icon-icon {
+}
+
+._icon-arrow {
+}
+
+._icon-favourites {
+}
+
+._icon-cart {
+}
+
+.phone-header {
+   &__items {
+   }
+
+   &__item {
+      position: relative;
+      display: flex;
+   }
+
+   &__phone {
+      color: #000;
+      font-weight: 900;
+      line-height: calc((22 / 18) * 100%);
+      white-space: nowrap;
+   }
+
+   &__arrow {
+      color: #e8aa31;
+      font-size: 11px;
+      padding: 5px;
+      margin: 0px 0px 0px 12px;
+   }
+   .arrow-turn {
+      transform: rotate(180deg);
+      transition: all 0.15s ease 0s;
+   }
+
+   &__body {
+   }
+   .body__active {
+      display: none;
+   }
+
+   &__list {
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      left: 0;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 15px;
+      li {
+         &:not(:last-child) {
+            margin-bottom: 18px;
+         }
+      }
+   }
+
+   &__callback {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: calc((22 / 18) * 100%);
+      color: #e8aa31;
+   }
+}
+.cart-header {
+   &__icon {
+      font-size: 35px;
+      position: relative;
+      span {
+         font-weight: 500;
+         font-size: 8px;
+         line-height: calc((10 / 8) * 100%);
+         top: 0px;
+         left: 28px;
+         position: absolute;
+      }
+   }
+
+   &__body {
+      margin: 0px 0px 0px 20px;
+   }
+
+   &__summ {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: calc((20 / 16) * 100%);
+   }
+
+   &__link {
+      white-space: nowrap;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: calc((20 / 16) * 100%);
+      color: #e8aa31;
+   }
 }
