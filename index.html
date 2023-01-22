@@ -14,64 +14,121 @@
 </head>
 
 <body>
-   <header class="header">
-      <div class="header__top top-header">
-         <div class="top-header__container">
-            <div class="top-header__menu menu">
-               <nav class="menu__list">
-                  <ul class="menu__list">
-                     <li class="menu__item"><a href="" class="menu__link">О нас</a></li>
-                     <li class="menu__item"><a href="" class="menu__link">Оплата и доставка</a></li>
-                     <li class="menu__item"><a href="" class="menu__link">Новости</a></li>
-                     <li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
-                  </ul>
-               </nav>
+   <div class="wrapper">
+      <header class="header">
+         <div class="header__top top-header">
+            <div class="top-header__container _container">
+               <div class="top-header__menu menu">
+                  <nav class="menu__list">
+                     <ul class="menu__list">
+                        <li class="menu__item"><a href="" class="menu__link">О нас</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">Оплата и доставка</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">Новости</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
+                     </ul>
+                  </nav>
+               </div>
+               <a href="" class="top-header__user _icon-account">Личный кабинет</a>
+               <button type="button" class="icon-menu"><span></span></button>
             </div>
-            <a href="" class="top-header__user _icon-account">Личный кабинет</a>
-            <button type="button" class="icon-menu"><span></span></button>
          </div>
-      </div>
-      <div class="header__body body-header">
-         <div class="body-header__container">
-            <a href="" class="body-header__logo _icon-Logo-header"></a>
-            <div class="body-header__search">
-               <form action="#" class="search-header ">
-                  <button type="submit" class="search-header__button _icon-search"></button>
-                  <input type="text" autocomplete="off" name="form[]" data-error="Ошибка" placeholder="Поиск"
-                     class="search-header__input ">
-               </form>
+         <div class="header__body body-header">
+            <div class="body-header__container _container">
+               <a href="" class="body-header__logo _icon-Logo-header"></a>
+               <div class="body-header__search">
+                  <form action="#" class="search-header ">
+                     <button type="submit" class="search-header__button _icon-search"></button>
+                     <input type="text" autocomplete="off" name="form[]" data-error="Ошибка" placeholder="Поиск"
+                        class="search-header__input ">
+                  </form>
+               </div>
+               <div class="body-header__actions actions-header">
+                  <a href="#" class="actions-header__location _icon-icon"><span>Москва</span></a>
+                  <div class="actions-header__phone phone-header">
+                     <div data-spollers class="phone-header__items">
+                        <div class="phone-header__item">
+                           <a href="tel:88007774967" class="phone-header__phone"> <span>8-800-777-49-67</span> </a>
+                           <button type="button" data-spollers class="phone-header__arrow _icon-arrow"></button>
+                           <div class="phone-header__body body__active">
+                              <ul class="phone-header__list">
+                                 <li> <a href="tel:88007774968"
+                                       class="phone-header__phone"><span>8-800-777-49-68</span></a> </li>
+                                 <li> <a href="tel:88007774969"
+                                       class="phone-header__phone"><span>8-800-777-49-69</span></a> </li>
+                                 <li> <a href="tel:88007774970"
+                                       class="phone-header__phone"><span>8-800-777-49-70</span></a> </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <button type="button" data-popup="#callback" class="phone-header__callback">Заказать
+                        звонок</button>
+                  </div>
+                  <a type="button" class="actions-header__favorite _icon-favourites"></a>
+                  <div class="actions-header__cart cart-header">
+                     <div class="cart-header__icon _icon-cart"><span>0</span></div>
+                     <div class="cart-header__body">
+                        <div class="cart-header__summ">0 р.</div>
+                        <a href="#" class="cart-header__link">Оформить заказ</a>
+                     </div>
+                  </div>
+               </div>
             </div>
-            <div class="body-header__actions actions-header">
-               <a href="#" class="actions-header__location _icon-icon">Москва</a>
-               <div class="actions-header__phone phone-header">
-                  <div data-spollers class="phone-header__items">
-                     <div class="phone-header__item">
-                        <a href="tel:88007774967" class="phone-header__phone">8-800-777-49-67</a>
-                        <button type="button" data-spollers class="phone-header__arrow _icon-arrow"></button>
-                        <div class="phone-header__body body__active">
-                           <ul class="phone-header__list">
-                              <li> <a href="tel:88007774968" class="phone-header__phone">8-800-777-49-68</a> </li>
-                              <li> <a href="tel:88007774969" class="phone-header__phone">8-800-777-49-69</a> </li>
-                              <li> <a href="tel:88007774970" class="phone-header__phone">8-800-777-49-70</a> </li>
-                           </ul>
+         </div>
+         <div class="header__catalog catalog-header">
+            <div class="catalog-header__container _container">
+               <nav class="catalog-header__menu menu-catalog">
+                  <ul class="menu-catalog__list">
+                     <li class="menu-catalog__item"><a href="#" class="menu-catalog__link">Каталог ножей</a></li>
+                     <li class="menu-catalog__item"><a href="#" class="menu-catalog__link">Клинковое оружие</a></li>
+                     <li class="menu-catalog__item"><a href="#" class="menu-catalog__link">Сувенирные изделия</a></li>
+                     <li class="menu-catalog__item"><a href="#" class="menu-catalog__link">Фонари ARMYTEK</a></li>
+                     <li class="menu-catalog__item"><a href="#" class="menu-catalog__link">Сопуствующие товары</a></li>
+                  </ul>
+                  <div class="menu-catalog__submenu submenu">
+                     <div class="submenu__container _container">
+                        <div class="submenu__block">
+                           <div class="submenu__column">
+                              <a href="#" class="submenu__category">Категория ножей</a>
+                              <ul class="submenu__list">
+                                 <li class="submenu__item">
+                                    <a href="#" class="submenu__link">Разделочные ножи</a>
+                                 </li>
+                                 <li class="submenu__item">
+                                    <a href="#" class="submenu__link">Туристические ножи</a>
+                                 </li>
+                                 <li class="submenu__item">
+                                    <a href="#" class="submenu__link">Ножи охотничьи</a>
+                                 </li>
+                                 <li class="submenu__item">
+                                    <a href="#" class="submenu__link">Булатные ножи</a>
+                                 </li>
+                                 <li class="submenu__item">
+                                    <a href="#" class="submenu__link">Ножи из дамаска</a>
+                                 </li>
+                                 <li class="submenu__item">
+                                    <a href="#" class="submenu__link">Тактического назначения</a>
+                                 </li>
+                                 <li class="submenu__item">
+                                    <a href="#" class="submenu__link">Метательные ножи</a>
+                                 </li>
+                                 <li class="submenu__item">
+                                    <a href="#" class="submenu__link">Мачете и кукри</a>
+                                 </li>
+                                 <li class="submenu__item">
+                                    <a href="#" class="submenu__link">Ножи кухонные</a>
+                                 </li>
+                              </ul>
+                              <a href="" class="submenu__all">Смотреть все</a>
+                           </div>
                         </div>
                      </div>
                   </div>
-                  <button type="button" class="phone-header__callback">Заказать звонок</button>
-               </div>
-               <a type= "button" class="actions-header__favorite _icon-favourites"></a>
-               <div class="actions-header__cart cart-header">
-                  <div class="cart-header__icon _icon-cart"><span>0</span></div>
-                  <div class="cart-header__body">
-                     <div class="cart-header__summ">0 р.</div>
-                     <a href="#" class="cart-header__link">Оформить заказ</a>
-                  </div>
-               </div>
+               </nav>
             </div>
          </div>
-      </div>
-      <div class="header__catalog catalog-header"></div>
-   </header>
+      </header>
+   </div>
 </body>
 
 </html>

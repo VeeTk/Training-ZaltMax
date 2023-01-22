@@ -161,6 +161,13 @@ body {
   min-width: 0;
 }
 
+._container {
+  max-width: 1590px;
+  padding: 0px 10px;
+  margin: 0 auto;
+  box-sizing: content-box;
+}
+
 .header__top {
   background-color: #141414;
   color: #fff;
@@ -189,6 +196,11 @@ body {
   font-size: 28px;
   margin: 0px 15px 0px 0px;
 }
+@media (any-hover: hover) {
+  .top-header__user:hover {
+    text-decoration: underline;
+  }
+}
 
 .menu__list {
   display: flex;
@@ -214,6 +226,11 @@ body {
   font-size: 16px;
   color: #fff;
   line-height: 125%;
+}
+@media (any-hover: hover) {
+  .menu__link:hover {
+    text-decoration: underline;
+  }
 }
 
 .icon-menu {
@@ -266,6 +283,11 @@ body {
 .body-header__logo {
   color: #141414;
   font-size: 42px;
+}
+@media (any-hover: hover) {
+  .body-header__logo:hover {
+    text-shadow: 3px 3px 4px #8c8b8b;
+  }
 }
 .body-header__search {
   flex: 1 1 auto;
@@ -330,15 +352,35 @@ body {
   font-size: 24px;
   margin: 0px 24px 0px 0px;
 }
+@media (any-hover: hover) {
+  .actions-header__location span:hover {
+    text-decoration: underline;
+  }
+}
 .actions-header__favorite {
+  font-size: 27px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (any-hover: hover) {
+  .actions-header__favorite:hover {
+    text-shadow: 3px 2px 0px #8c8b8b;
+  }
 }
 .actions-header__cart {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (any-hover: hover) {
+  ._icon-cart:hover {
+    top: -3px;
+  }
+  ._icon-cart:active {
+    top: 3px;
+  }
 }
 
 .phone-header__item {
@@ -350,6 +392,11 @@ body {
   font-weight: 900;
   line-height: 122.2222222222%;
   white-space: nowrap;
+}
+@media (any-hover: hover) {
+  .phone-header__phone span:hover {
+    text-decoration: underline;
+  }
 }
 .phone-header__arrow {
   color: #e8aa31;
@@ -382,18 +429,35 @@ body {
   line-height: 122.2222222222%;
   color: #e8aa31;
 }
+@media (any-hover: hover) {
+  .phone-header__callback:hover {
+    text-decoration: underline;
+  }
+}
 
+.cart-header {
+  display: flex;
+}
 .cart-header__icon {
+  flex: 0 0 37px;
   font-size: 35px;
   position: relative;
 }
 .cart-header__icon span {
+  width: 14px;
+  height: 14px;
   font-weight: 500;
   font-size: 8px;
   line-height: 125%;
   top: 0px;
   left: 28px;
   position: absolute;
+  background-color: #e8aa31;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .cart-header__body {
   margin: 0px 0px 0px 20px;
@@ -409,4 +473,107 @@ body {
   font-size: 16px;
   line-height: 125%;
   color: #e8aa31;
+}
+@media (any-hover: hover) {
+  .cart-header__link:hover {
+    text-decoration: underline;
+  }
+}
+
+.catalog-header {
+  background-color: #141414;
+  position: relative;
+}
+.menu-catalog {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+}
+.menu-catalog__list {
+  min-height: 70px;
+  font-weight: 700;
+  line-height: 125%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-catalog__link {
+  position: relative;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 70px;
+  transition: color 0.15s ease 0s;
+}
+.menu-catalog__link::after {
+  content: "";
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  width: 100%;
+  height: 2px;
+  background-color: #e8aa31;
+  transition: all 0.15s ease 0s;
+}
+@media (any-hover: hover) {
+  .menu-catalog__link:hover {
+    color: #e8aa31;
+  }
+  .menu-catalog__link:hover::after {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.submenu {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 100%;
+  background-color: #141414;
+}
+.submenu__block {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin: 0px 0px 30px 0px;
+}
+.submenu__column {
+  flex: 1 1 auto;
+}
+.submenu__category {
+  display: flex;
+  align-items: center;
+  min-height: 80px;
+  font-size: 16px;
+  line-height: 125%;
+  font-weight: 700;
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.submenu__list {
+  margin: 30px 0px;
+}
+.submenu__list :not(:last-child) {
+  margin: 0px 0px 20px 0px;
+}
+.submenu__link {
+  color: #fff;
+}
+@media (any-hover: hover) {
+  .submenu__link:hover {
+    text-decoration: underline;
+  }
+}
+.submenu__all {
+  color: #e8aa31;
+}
+@media (any-hover: hover) {
+  .submenu__all:hover {
+    text-decoration: underline;
+  }
 }
